@@ -1,211 +1,241 @@
 <!DOCTYPE html>
 <html>
-    <head lang="en">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
+<head lang="en-us">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#3A3352">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>HackNC 2018</title>
+    <link rel="shortcut icon" type="image/png" type="image/png" href="static/assets/images/logo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa">
+    <link href="https://fonts.googleapis.com/css?family=Arvo|Lobster+Two|Montserrat|Pacifico|Philosopher|Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/main.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+</head>
 
-        <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
-        <link rel="stylesheet" href="/static/assets/css/main.css"></script>
+<body>
+    <a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000"
+        href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=white"
+        target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg"
+            alt="Major League Hacking 2019 Hackathon Season" style="width:100%"></a>
+    <main id="content container">
 
-        <link href="https://fonts.googleapis.com/css?family=Bungee|Rubik|Work+Sans|Cabin|Arvo|Nunito|Josefin+Sans" rel="stylesheet">
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-        <link href="static/assets/css/flipclock.css" rel="stylesheet">
-        <link rel='icon' href='/static/assets/images/favicon.png'>
-
-        <title>HackNC 2017</title>
-    </head>
-
-    <body class='white-text'>
-
-<a id="mlh-trust-badge"
-    style="display:block;max-width:100px;position:fixed;right:1%;top:0;width:5%;z-index:10000"
-    href="https://mlh.io/seasons/na-2018/events?utm_source=na-2018&utm_medium=TrustBadge&utm_campaign=na-2018&utm_content=black"
-target="_blank"><img
-src="https://s3.amazonaws.com/logged-assets/trust-badge/2018/black.png"
-alt="Major League Hacking 2017 Hackathon Season" style="width:100%"></a>
-        <div class="background-dark scrollspy" id='home'>
-            <div class="row center" id="tubes-row">
-                <div id="tubes">
-                </div>
-            </div>
-            <span id="date">November 3rd - 5th <br/></span>
-
-            <div id="registration">
-                <a id="live" class="btn-large component"
-                    href="live">Live Info and Updates</a>
-            </div>
-
-            <!-- TODO Setup Scrollspy here -->
-            <div id="navwrapper">  
-                <div id="navbar" class='center'>
-                    <!--MOBILE-->
-                    <ul class='nbar tabs-transparent table-of-contents hide-on-large-only'>
-                        <li class="nitem"><a href="#home"><span>Home</span></a></li>
-                        <!-- <li class="nitem"><a href="#register">Register</a></li> <--></-->
-                        <!--<li class="nitem"><a
-                            href="#info"><span>Info</span></a></li>-->
-                        <li class="nitem"><a href="#faq"><span>FAQ</span></a></li>
-                        <!--<li class="nitem"><a
-                            href="#travel"><span>Travel</span></a></li>-->
-                        <li class="nitem"><a href="#schedule"><span>Schedule</span></a></li>
-                        <li class="nitem"><a href="#sponsors"><span>Sponsors</span></a></li>
-                        <!--<li class="nitem"><a
-                            href="#contact"><span>Contact</span></a></li>-->
-                    </ul>
-                    <!--DESKTOP-->
-                    <ul class='nbar tabs-transparent table-of-contents hide-on-med-and-down'>
-                        <li class="nitem"><a href="#home"><span>Home</span></a></li>
-                        <!-- <li class="nitem"><a href="#register">Register</a></li> -->
-                        <li class="nitem"><a href="#info"><span>Info</span></a></li>
-                        <li class="nitem"><a href="#faq"><span>FAQ</span></a></li>
-                        <li class="nitem"><a href="#travel"><span>Travel</span></a></li>
-                        <li class="nitem"><a href="#schedule"><span>Schedule</span></a></li>
-                        <li class="nitem"><a href="#sponsors"><span>Sponsors</span></a></li>
-                        <li class="nitem"><a href="#prizes"><span>Prizes</span></a></li>
-                        <li class="nitem"><a href="#contact"><span>Contact</span></a></li>
-                    </ul>
+        <div id='volunteer-mentor' class='modal'>
+            <div class='modal-content light'>
+                <h4>Which one would you like to do?</h4>
+                <div class="center">
+                <a class='btn-large form-btn' href="https://goo.gl/forms/NPIVpv7DasufAcw73">Volunteer!</a>
+                <a class='btn-large form-btn'
+                                                href="https://goo.gl/forms/ipmaTelKd5D1eY3f1">
+                    Mentor!</a>
                 </div>
             </div>
         </div>
 
-        <!-- <div class="section background-dark scrollspy" id='register'>
-            <h1>Register</h1>
-            </div> -->
-
-            <!-- Registration Moddal -->
-            <div id="register" class="modal">
-                <div class="modal-content">
-                    <h4>Registration</h4>
-                    <p>FORM TODO</p>
-                </div>
-
-                <div class="modal-footer">
-                    <a href="#!" class="modal-action modal-close waves-effect
-                        waves-green btn-flat">Submit</a>
+        <div id='sponsor-btn' class='modal'>
+            <div class='modal-content light'>
+                <h4>Thank you for your interest!</h4>
+                <p>If you would like more information, here is our
+                    <a href="static/assets/resources/sponsor_packet.pdf">
+                        sponsor information packet
+                    </a>, and if you are interested in sponsoring us, send an email to <a class="sponsor-email"
+                    href="mailto:sponsors@hacknc.com">sponsors@hacknc.com</a></p>
                 </div>
             </div>
+        </div>
+        
 
+        <!-- Logo and header -->
+        <div class="banner">
+            <div id='space-holder'></div>
+            <div class="section dark center">
+                <img class="logo" src="static/assets/images/CarnivalBannerHanging.png">
+                <h4 class="fall2018" class="center">October 6-7, 2018</h4>
+                <div class='hide-on-small-only'>
+                    <a class='btn-large modal-trigger form-btn'
+                         href="#volunteer-mentor">Volunteer!</a>
+                    <a class='btn-large form-btn' href="https://hacknc.typeform.com/to/vum1rA">Register Now!</a>
+                    <a class='btn-large form-btn modal-trigger'
+                        href="#sponsor-btn">Sponsor Us!</a>
+                </div>
+                <div class="hide-on-med-and-up">
+                    <a class='btn-large form-btn' href="https://hacknc.typeform.com/to/vum1rA">Register Now!</a><br>
+                    <a class='btn-large modal-trigger form-btn'
+                        href="#volunteer-mentor">Volunteer!</a><br>
+                    <a class='btn-large form-btn modal-trigger'
+                        href="#sponsor-btn">Sponsor Us!</a>
 
-            <div class="section background-light scrollspy" id='info'>
-                <div class="container">
-                    <h2 class="center">General Information</h2>
-                    <div class="row">
-                        <div class="col s12 center">
-                            <p>
-HackNC 2017 is going to take place from November 3rd through 5th in Woollen
-Gymnasium at UNC-Chapel Hill!</p>
+                </div>
+            </div>
+        </div>
 
-                            <p> We are a MLH sponsored event, so please note that we
-                            follow the MLH code of conduct, which can be found
-                            <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">here</a></p>
+        <!-- Navigation Bar -->
+        <nav class='nfixed'>
+            <div class="nav-wrapper center">
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="hide-on-small-only">
+                    <li><a href="#about">Home</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#travel">Travel</a></li>
+                    <li><a href="#sponsors">Sponsors</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
 
-                        </div>
-                    </div>
+        <!-- Mobile Navigation Bar -->
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="#about">Home</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#travel">Travel</a></li>
+            <li><a href="#sponsors">Sponsors</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="info">
+            <div class="section light about">
+                <a class="nav-anchor" id="about"></a>
+                <div class="container row">
+                    <h2>General Information</h2>
+                    <p>HackNC 2018 will take place on October 6th and 7th in Murray
+                    and Venable Halls at UNC-Chapel Hill!</p>
+                    <p>HackNC is a weekend for students of all skill levels to broaden their talents. Your challenge is to make
+                        an awesome project in just 24 hours. You will have access to hands-on workshops and demos from our sponsors,
+                        as well as exciting talks about the awesome things happening right now with computer science and technology
+                        - not to mention all of the free food, shirts, stickers, and swag!</p>
+                    <p>HackNC begins with just a weekend, but we hope you will whet skills, make friends, and foster ideas here
+                        that flourish. Ready to apply? You'll need a laptop and your fanciest thinking cap - everything else
+                        is on us. Get started now.</p>
+                    <p>HackNC is an MLH-sponsored event, as such, we follow the MLH
+                    <a href="http://mlh.io/code-of-conduct">code of conduct</a>.</p>
                 </div>
             </div>
 
             <div class="map-container">
-                <iframe
-                frameborder="0" style="border:0"
-                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBzbKXif59z3vKRfUXR3LOs_Oc5w-GpB2o
-                &q=Wollen+Gym+UNC+NC" allowfullscreen>
-                </iframe>
+                    <iframe frameborder="0" style="border:0"
+                    src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJk8PO6OjCrIkRUKIkRx3cais&key=AIzaSyBzbKXif59z3vKRfUXR3LOs_Oc5w-GpB2o" allowfullscreen></iframe> 
             </div>
 
-            <div class="section background-light scrollspy" id='faq'>
-                <div class="container">
-                    <h2 class="center">FAQ</h2>
-                    <ul class="collapsible popout" data-collapsible="accordion">
-                        <li>
-                            <div class="collapsible-header faq-dark"><i class="material-icons"></i>What is a hackathon?</div>
-                            <div class="collapsible-body faq-light"><p>A hackathon is a weekend of fun and learning. You'll become a better programmer, meet awesome people, and make cool stuff.  There will also be opportunities to win cool prizes and network with our sponsors.</p></div>
-                        </li>
-                        <li>
-                            <div class="collapsible-header faq-light"><i class="material-icons"></i>What if I'm in high school?</div>
-                            <div class="collapsible-body faq-dark"><p>As long as you'll be 18 or an enrolled student at UNC by November 3rd, 2017, we would love for you to come to HackNC.  Unfortunately (because of the incredible amount of paperwork involved) we won't be able to accept anyone under the age of 18 not currently enrolled at UNC</p></div>
-                        </li>
-                        <li>
-                            <div class="collapsible-header faq-dark"><i class="material-icons"></i>Can I hack?</div>
-                            <div class="collapsible-body faq-light"><p>High schoolers over 18, undergraduates, and graduate students are welcome to participate as hackers.  Professionals should check out mentorship.</p></div>
-                        </li>
-                        <li>
-                            <div class="collapsible-header faq-light"><i class="material-icons"></i>How do I get in?</div>
-                            <div class="collapsible-body faq-dark"><p>Anyone can
-                                attend HackNC. Our admission criteria doesn't
-                                include your level of experience.  However, the
-                                registration system is still under construction,
-                                join our mailing list to get updates!</p></div>
-                        </li>
-                        <li>
-                            <div class="collapsible-header faq-dark"><i class="material-icons"></i>Got any hardware?</div>
-                            <div class="collapsible-body faq-light"><p>You bet!  MLH is providing the <a href="https://mlh.io/hardware-lab">full hardware lab</a>. In addition, we will have soldering kits and other assorted components, Arduinos, Raspberry Pis, sensors, and more Pebbles than you can wear on four limbs...</p></div>
-                        </li>
-                        <li>
-                            <div class="collapsible-header faq-light"><i class="material-icons"></i>Can I mentor?</div>
-                            <div class="collapsible-body faq-dark"><p>Professionals are welcome to join as mentors, sponsors, or lecturers.  If you want to come as a mentor, contact us!</p></div>
-                        </li>
-                        <li>
-                            <div class="collapsible-header faq-dark"><i class="material-icons"></i>Will I fit in?</div>
-                            <div class="collapsible-body faq-light"><p>Definitely! HackNC and the UNC Computer Science Department are committed to making computer science a more diverse field. Inclusiveness is a top priority for us, and we've been beginner-friendly from the start.</p></div>
-                        </li>
-                        <li>
-                            <div class="collapsible-header faq-light"><i class="material-icons"></i>Can I use old code?</div>
-                            <div class="collapsible-body faq-dark"><p>You may use all the publicly available code and APIs that you want, but the code you will be judged on at the end of the hackathon must be new.</p></div>
-                        </li>
-                        <li>
-                            <div class="collapsible-header faq-dark"><i class="material-icons"></i>What about sleep?</div>
-                            <div class="collapsible-body faq-light"><p>You should do it!  Bring your own pillow and sleeping bag or blankets. There will be a sleeping space available Friday and Saturday nights.  More info available on our travel page.</p></div>
-                        </li>
-                        <li>
-                            <div class="collapsible-header faq-light"><i class="material-icons"></i>Travel costs?</div>
-                            <div class="collapsible-body faq-dark"><p>If you want to come, we want to help get you here.  We will have a limited number of reimbursements for carpooling or vanpooling.</p></div>
-                        </li>
-                        <li>
-                            <div class="collapsible-header faq-dark"><i class="material-icons"></i>Will there be food?</div>
-                            <div class="collapsible-body faq-light"><p>Don’t worry - we’ll provide six full meals throughout the hackathon and there will be plenty of snacks in between. You won’t be hungry.</p></div>
-                        </li>
-                        <li>
-                            <div class="collapsible-header faq-light"><i class="material-icons"></i>How can I volunteer or mentor?</div>
-                            <div class="collapsible-body faq-dark"><p>Please
-                                join our mailing list above, and we will send out
-                                information later this fall.
-                            </p></div>
-                        </li>
-                        <li>
-                            <div class="collapsible-header faq-dark"><i class="material-icons"></i>Will you send a bus?</div>
-                            <div class="collapsible-body faq-light"><p>If you're
-                                at Georgia Tech or in that part of Atlanta: you bet!
-                                Join our mailing list and watch for more information
-                                as we get closer to HackNC.
-                        </li>
-                    </ul>
+            <div class="section dark faq">
+                <a class="nav-anchor" id="faq"></a>
+                <div class="container row">
+                    <h2 class="col s12">FAQ</h2>
+                    <div class="col s12 m6 l6">
+                        <ul class="collapsible">
+                            <li>
+                                <div class="collapsible-header"><h6>What is a hackathon?</h6></div>
+                                <div class="collapsible-body"><p>A hackathon is a weekend of fun and learning. You'll become a better programmer, meet awesome people,
+                                    and make cool stuff. There will also be opportunities to win cool prizes and network with our sponsors.</p></div>
+                            </li>
+                        </ul>
+                        <ul class="collapsible">
+                            <li>
+                                <div class="collapsible-header"><h6>What if I'm in high school?</h6></div>
+                                <div class="collapsible-body"><p>As long as you'll be 18 by October 6th 2018, we would love for you to come to HackNC. Unfortunately
+                                    (because of the incredible amount of paperwork involved) we won't be able to accept anyone under the
+                                    age of 18.</p></div>
+                            </li>
+                        </ul>
+                        <ul class="collapsible">
+                            <li>
+                                <div class="collapsible-header"><h6>Can I hack?</h6></div>
+                                <div class="collapsible-body"><p>High schoolers over 18, undergraduates, and graduate students are welcome to participate as hackers. Professionals
+                                    should check out mentorship.</p></div>
+                            </li>
+                        </ul>
+                        <ul class="collapsible">
+                            <li>
+                                <div class="collapsible-header"><h6>How do I get in?</h6></div>
+                                <div class="collapsible-body"><p>Anyone can attend HackNC. Our admission criteria doesn't include your level of experience. <a href="https://hacknc.typeform.com/to/vum1rA">Go here to register now!</a></p></div>
+                            </li>
+                        </ul>
+                        <ul class="collapsible">
+                            <li>
+                                <div class="collapsible-header"><h6>Got any hardware?</h6></div>
+                                <div class="collapsible-body"><p>You bet! MLH is providing the <a href="https://mlh.io/hardware-lab"></a>full hardware lab</a>. In addition,
+                                    we will have soldering kits and other assorted components, Arduinos, Raspberry Pis, sensors, and more
+                                    stickers than you can wear on four limbs...</p></div>
+                            </li>
+                        </ul>
+                        <ul class="collapsible">
+                            <li>
+                                <div class="collapsible-header"><h6>Can I mentor?</h6></div>
+                                <div class="collapsible-body"><p>Professionals are welcome to join as mentors, sponsors, or lecturers. If you want to come as a mentor,
+                                    contact us!</p></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col s12 m6 l6">
+                        <ul class="collapsible">
+                            <li>
+                                <div class="collapsible-header"><h6>Will I fit in?</h6></div>
+                                <div class="collapsible-body"><p>Definitely! HackNC and the UNC Computer Science Department are committed to making computer science a
+                                    more diverse field. Inclusiveness is a top priority for us, and we've been beginner-friendly from the
+                                    start.
+                                </p></div>
+                            </li>
+                        </ul>
+                        <ul class="collapsible">
+                            <li>
+                                <div class="collapsible-header"><h6>Can I use old code?</h6></div>
+                                <div class="collapsible-body"><p>You may use all the publicly available code and APIs that you want, but the code you will be judged on
+                                    at the end of the hackathon must be new.</p></div>
+                            </li>
+                        </ul>
+                        <ul class="collapsible">
+                            <li>
+                                <div class="collapsible-header"><h6>What about sleep?</h6></div>
+                                <div class="collapsible-body"><p>You should do it! Bring your own pillow and sleeping bag or blankets. There will be a sleeping space available
+                                    Friday and Saturday nights. More info available on our travel page.</p></div>
+                            </li>
+                        </ul>
+                        <ul class="collapsible">
+                            <li>
+                                <div class="collapsible-header"><h6>Travel costs?</h6></div>
+                                <div class="collapsible-body"><p>If you want to come, we want to help get you here. We will have a limited number of reimbursements for
+                                    carpooling.
+                                </p></div>
+                            </li>
+                        </ul>
+                        <ul class="collapsible">
+                            <li>
+                                <div class="collapsible-header"><h6>Will there be food?</h6></div>
+                                <div class="collapsible-body"><p>Don’t worry - we’ll provide six full meals throughout the hackathon and there will be plenty of snacks
+                                    in between. You won’t be hungry.</p></div>
+                            </li>
+                        </ul>
+                        <ul class="collapsible">
+                            <li>
+                                <div class="collapsible-header"><h6>How can I volunteer or mentor?</h6></div>
+                                <div class="collapsible-body"><p>Please join our mailing list above, we will send out information later this fall.</p></div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-
-            <div class='section background-dark scrollspy' id='travel'>
-                <div class='container'>
-                    <h2 class='center'>Travel</h2>
+            <div class="section light travel">
+                <a class="nav-anchor" id="travel"></a>
+                <div class="container">
+                    <h2>Travel</h2>
                     <div class='row'>
-                        <div class='col s10 offset-s1'>
+                        <div class='col s12'>
                             <h4>Parking</h4>
                             <p>Free parking is available over the weekend everywhere on campus, but we recommend the following decks:</p>
                             <ul>
-                                <li><a href="https://www.google.com/maps/dir/Cobb+Parking+Deck,+Chapel+Hill,+NC+27514/Woollen+Gymnasium,+Chapel+Hill,+NC/@35.9107127,-79.0472257,18z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x89acc2ea68ddf24b:0x38f6620f02eadfae!2m2!1d-79.0456262!2d35.9117533!1m5!1m1!1s0x89acc2ebb8543153:0x6c83a40e14111825!2m2!1d-79.0459804!2d35.9094423!3e2">Cobb Parking Deck</a></li>
-                                <li><a href="https://www.google.com/maps/dir/Bell+Tower+Parking+Deck,+Chapel+Hill,+NC/Woollen+Gymnasium,+Chapel+Hill,+NC/@35.9107127,-79.0472257,18z/data=!4m14!4m13!1m5!1m1!1s0x89acc2eedc3bd00f:0x2dd3a16fc7f5b0c9!2m2!1d-79.0500641!2d35.9067103!1m5!1m1!1s0x89acc2ebb8543153:0x6c83a40e14111825!2m2!1d-79.0459804!2d35.9094423!3e2">Bell Tower Parking Deck</a></li>
+                                <li><a href="https://www.google.com/maps/dir/Cobb+Parking+Deck,+Chapel+Hill,+NC+27514/Venable+Hall,+Chapel+Hill,+NC/@35.9101836,-79.051437,17z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x89acc2ea68ddf24b:0x38f6620f02eadfae!2m2!1d-79.0456143!2d35.911746!1m5!1m1!1s0x89acc2e8e8cec393:0x2b6adc1d4724a250!2m2!1d-79.0513037!2d35.9096217!3e2">Cobb Parking Deck</a></li>
+                                <li><a href="https://www.google.com/maps/dir/Bell+Tower+Parking+Deck,+Chapel+Hill,+NC/Venable+Hall,+Chapel+Hill,+NC/@35.9082409,-79.0533441,17z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x89acc2eedc3bd00f:0x2dd3a16fc7f5b0c9!2m2!1d-79.0500641!2d35.9067103!1m5!1m1!1s0x89acc2e8e8cec393:0x2b6adc1d4724a250!2m2!1d-79.0513037!2d35.9096217!3e2">Bell Tower Parking Deck</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class='row'>
-                        <div class='col s10 offset-s1'>
-                            <h4>Bus</h4>
-                            <p>We will be sending a bus to the Georgia Institute of Technology. More details to follow.</p>
-                        </div>
-                    </div>
-                    <div class='row'>
-                        <div class='col s10 offset-s1'>
+                        <div class='col s12'>
                             <h4>Carpools</h4>
                             <p>A carpool consists of 3 or more students intending to participate in HackNC.
                             If you were accepted, your carpool is automatically eligible for reimbursement of the value detailed below, which roughly corresponds to the round trip cost of gas. Limit one per carpool. Qualifications for carpool grants are as follows:</p>
@@ -213,15 +243,15 @@ Gymnasium at UNC-Chapel Hill!</p>
                                 <li>RSVP via the link in your email</li>
                                 <li>Drive yourself and at least 2 passengers to HackNC.</li>
                                 <li>Submit a project at the end of HackNC.</li>
-                                <li>Submit a copy of gas receipts by Nov. 7, 2017.</li>
+                                <li>Submit a copy of gas receipts by Oct 7th 2018.</li>
                             </ol>
                         </div>
                     </div>
                     
                     <div class='row'>
-                        <div class='col s10 offset-s1'>
+                        <div class='col s12'>
                             <h4>Carpool Amounts</h4>
-                            <table align='left' class='grant-table'>
+                            <table class='grant-table'>
                                 <tr><th>One-way distance</th><th>Grant Amount</th></tr>
                                 <tr><td>0 - 50 miles</td><td>$0</td></tr>
                                 <tr><td>51 - 100 miles</td><td>$20</td></tr>
@@ -235,7 +265,7 @@ Gymnasium at UNC-Chapel Hill!</p>
                     </div>
                     
                     <div class='row'>
-                        <div class='col s10 offset-s1'>
+                        <div class='col s12'>
                             <p>We cannot make exceptions to this policy. Grants will be distributed after the event by mail.</p>
                             <h4>Travel Vouchers</h4>
                             <p>HackNC has a limited number of $50 grants available to supplement the cost of bus/train/plane tickets. These vouchers may be available after all carpool requests are processed on a first-come, first-served basis.</p>
@@ -244,169 +274,72 @@ Gymnasium at UNC-Chapel Hill!</p>
                     </div>
                 </div>
             </div>
-
-            <div class='section background-light scrollspy' id='schedule'>
-                <h2 class='center'>Schedule</h2>
-                <div class='row center'>
-                    <p>We'll have a rolling check-in the entire weekend, so we can check you in whenever you arrive!</p>
-                    <div class='table-container col s12'>
-                        <table>
-                            <tbody>
-                                <tr class='day'><td class='daycell'>Friday</td></tr>
-                                <tr><td class='time'>7:00 PM</td><td class='event'>Check In</td><td class='place'>Woollen Lobby</td></tr>
-                                <tr><td class='time'>7:00 PM</td><td class='event'>Hang out and have fun</td><td class='place'>Woollen Gym</td></tr>
-                                <tr><td class='time'>9:00 PM</td><td class='event'>Pizza Party</td><td class='place'>Woollen Gym</td></tr>
-                                <tr class='day'><td class='daycell'>Saturday</td></tr>
-                                <tr><td class='time'>7:00 AM</td><td class='event'>Check In</td><td class='place'>Woollen Lobby</td></tr>
-                                <tr><td class='time'>8:00 AM</td><td class='event'>Breakfast</td><td class='place'>Woollen Gym</td></tr>
-                                <tr><td class='time'>10:00 AM</td><td class='event'>Opening Ceremony</td><td class='place'>Woollen Gym</td></tr>
-                                <tr><td class='time'>11:00 AM</td><td class='event'>Hacking Begins</td><td class='place'>Everywhere</td></tr>
-                                <tr><td class='time'>11:00 AM</td><td class='event'>Sponsor Fair</td><td class='place'>Woollen Gym</td></tr>
-                                <tr><td class='time'>12:00 PM</td><td class='event'>Lunch</td><td class='place'>Woollen Gym</td></tr>
-                                <tr><td class='time'>1:00 PM</td><td class='event'>Workshop and Talks Begin</td><td class='place'>Classrooms</td></tr>
-                                <tr><td class='time'>7:00 PM</td><td class='event'>Dinner</td><td class='place'>Woollen Gym</td></tr>
-                                <tr><td class='time'>9:00 PM</td><td class='event'>MLH Event</td><td class='place'>Woollen Gym</td></tr>
-                                <tr class='day'><td class='daycell'>Sunday</td></tr>
-                                <tr><td class='time'>12:00 AM</td><td class='event'>Midnight Snack</td><td class='place'>Woollen Gym</td></tr>
-                                <tr><td class='time'>5:00 AM</td><td class='event'>Early Breakfast</td><td class='place'>Woollen Gym</td></tr>
-                                <tr><td class='time'>9:00 AM</td><td class='event'>Brunch</td><td class='place'>Woollen Gym</td></tr>
-                                <tr><td class='time'>9:00 AM</td><td class='event'>Demos and Judging</td><td class='place'>Woollen Gym</td></tr>
-                                <tr><td class='time'>11:00 AM</td><td class='event'>Closing Ceremony</td><td class='place'>Woollen Gym</td></tr>
-                            </tbody>
-                        </table>
+        </div>
+        <div class="section dark sponsors">
+            <a class="nav-anchor" id="sponsors"></a>
+            <div class="container">
+                <h2>Our Past Sponsors</h2>
+                <div class='center'>
+                    <div class="row">
+                        <div class="col s12 m4 center">
+                            <a href='https://www.capitalone.com/'>
+                                <img class='sponsor-image tier-4' src='static/assets/images/sponsors/capitalone.png'></a>
+                            <a href='https://www.ibm.com/'>
+                                <img class='sponsor-image tier-3' src='static/assets/images/sponsors/ibm.png'></a>
+                            <a href='https://www.genesys.com/'>
+                                <img class='sponsor-image tier-1' src='static/assets/images/sponsors/genesys.png'></a>
+                            <a href='https://www.facebook.com/'>
+                                <img class='sponsor-image tier-1' src='static/assets/images/sponsors/facebook.png'></a>
+                        </div>
+                        <div class="col s12 m4 center">
+                            <a href='https://www.fidelity.com/'>
+                                <img class='sponsor-image tier-4' src='static/assets/images/sponsors/fidelity.png'></a>
+                            <a href='https://www.sentryone.com/'>
+                                <img class='sponsor-image tier-3' src='static/assets/images/sponsors/sentryone.png'></a>
+                            <a href='https://www.sas.com/'>
+                                <img class='sponsor-image tier-1' src='static/assets/images/sponsors/sas.png'></a>
+                            <a href='https://cs.unc.edu/'>
+                                <img class='sponsor-image tier-1' src='static/assets/images/sponsors/unc-cs.png'></a>
+                        </div>
+                        <div class="col s12 m4 center">
+                            <a href='https://www.captechconsulting.com/'>
+                                <img class='sponsor-image tier-3' src='static/assets/images/sponsors/captech.png'></a>
+                            <a href='https://www.redventures.com/'>
+                                <img class='sponsor-image tier-3' src='static/assets/images/sponsors/rv.png'></a>
+                            <a href='https://www.sonovol.com/'>
+                                <img class='sponsor-image tier-1' src='static/assets/images/sponsors/sonovol.png'></a>
+                        </div>
                     </div>
-                </div>
-            </div>
-
-            <div class='section sponsors background-light scrollspy' id='sponsors'>
-                <h2 class="center">Our Sponsors</h2>
-                <div class='container center'>
-                    <a href='https://www.capitalone.com/'>
-                        <img class='sponsor-image tier-4' src='static/assets/images/sponsors/capitalone.png'></a>
-                    <a href='https://www.fidelity.com/'>
-                        <img class='sponsor-image tier-4' src='static/assets/images/sponsors/fidelity.png'></a>
-                    <a href='https://www.captechconsulting.com/'>
-                        <img class='sponsor-image tier-3' src='static/assets/images/sponsors/captech.png'></a>
-                    <a href='https://www.ibm.com/'>
-                        <img class='sponsor-image tier-3' src='static/assets/images/sponsors/ibm.png'></a>
-                    <a href='https://www.sentryone.com/'>
-                        <img class='sponsor-image tier-3' src='static/assets/images/sponsors/sentryone.png'></a>
-                    <a href='https://www.redventures.com/'>
-                        <img class='sponsor-image tier-3' src='static/assets/images/sponsors/rv.png'></a>
-                    <a href='https://www.genesys.com/'>
-                        <img class='sponsor-image tier-1' src='static/assets/images/sponsors/genesys.png'></a>
-                    <a href='https://www.sas.com/'>
-                        <img class='sponsor-image tier-1' src='static/assets/images/sponsors/sas.png'></a>
-                    <a href='https://www.sonovol.com/'>
-                        <img class='sponsor-image tier-1' src='static/assets/images/sponsors/sonovol.png'></a>
-                    <a href='https://www.facebook.com/'>
-                        <img class='sponsor-image tier-1' src='static/assets/images/sponsors/facebook.png'></a>
-                    <a href='https://cs.unc.edu/'>
-                        <img class='sponsor-image tier-1' src='static/assets/images/sponsors/unc-cs.png'></a>
                     <p class="center">Looking to sponsor HackNC? Email us at <a class="sponsor-email"
                     href="mailto:sponsors@hacknc.com">sponsors@hacknc.com</a></p>
                 </div>
             </div>
-
-            <div class='section background-light scrollspy' id='prizes'>
-                <h2 class="center">Prizes</h2>
-                <h5 class="center">(More to be announced at the event)</h5>
-                <div class='container center'>
-                    <div class='row'>
-                        <div class='col s12 m4 l4 center'>
-                            <div class='card'>
-                                <div class='card-content'>
-                                    <h5>HackNC</h5>
-                                    <p><u>1st Place</u></p>
-                                    <p>One GoPro HERO Session per Team Member</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class='col s12 m4 l4 center'>
-                            <div class='card'>
-                                <div class='card-content'>
-                                    <h5>HackNC</h5>
-                                    <p><u>2nd Place</u></p>
-                                    <p>One Amazon Echo Dot per Team Member</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class='col s12 m4 l4 center'>
-                            <div class='card'>
-                                <div class='card-content'>
-                                    <h5>HackNC</h5>
-                                    <p><u>3nd Place</u></p>
-                                    <p>One Mini Quadcopter per Team Member</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='row'>
-                        <div class='col s12 m4 l4 center'>
-                            <div class='card'>
-                                <div class='card-content'>
-                                    <h5>Capital One</h5>
-                                    <p><u>Best Financial Hack</u></p>
-                                    <p>One $250 Amazon Gift Card per Team Member</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class='col s12 m4 l4 center'>
-                            <div class='card'>
-                                <div class='card-content'>
-                                    <h5>CapTech</h5>
-                                    <p><u>Most Community Impact</u></p>
-                                    <p>One Amazon Echo Dot per Team Member</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class='col s12 m4 l4 center'>
-                            <div class='card'>
-                                <div class='card-content'>
-                                    <h5>SentryOne</h5>
-                                    <p><u>Best Use of the Microsoft Stack</u></p>
-                                    <p>One $50 Amazon Gift Card per Team Member</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        </div>
+    
+    </main>
+    <footer class="section light contact page-footer">
+        <div class="container">
+            <a class="nav-anchor" id="contact"></a>
+            <h2>Contact</h2>
+            <div class="row">
+                <div class="col s12"><a href="https://www.facebook.com/thehacknc/">
+                        <i class="fab fa-facebook-square"></i><span> Facebook</span></a>
                 </div>
-            </div> 
-
-            <div class="section background-dark scrollspy" id='contact'>
-                <h2 class="center">Contact</h2>
-                <div class="container">
-                    <div class="row">
-                        <ul class="center" id="contact-links">
-                            <li class="left fb-link"><a href="https://www.facebook.com/thehacknc/?fref=ts" class="white-text">
-                                <i class="fa fa-facebook-official"></i> Facebook</a></li>
-                            <li class="right email-link"><a href="mailto:hello@hacknc.com" class="white-text">
-                                <i class="fa fa-envelope"></i> hello@hacknc.com</a></li>
-                            <li class="left snapchat-link"><a href="https://www.snapchat.com/add/hacknc" class="white-text">
-                                <i class="fa fa-snapchat-square"></i> HackNC</a></li>
-                            <li class="right twitter-link"><a href="https://twitter.com/thehacknc" class="white-text">
-                                <i class="fa fa-twitter-square"></i> @TheHackNC</a></li>
-                        </ul>
-                    </div>
+                <div class="col s12"><a href="https://twitter.com/thehacknc">
+                        <i class="fab fa-twitter-square"></i><span> Twitter</span></a>
+                </div>
+                <div class="col s12"><a href="https://www.instagram.com/thehacknc/">
+                        <i class="fab fa-instagram"></i><span> Instagram</span></a>
+                </div>
+                <div class="col s12"><a href="https://www.snapchat.com/add/hacknc">
+                        <i class="fab fa-snapchat-square"></i><span> Snapchat</span></a>
+                </div>
+                <div class="col s12"><a href="mailto:hello@hacknc.com">
+                        <i class="fas fa-envelope-square"></i><span> hello@hacknc.com</span></a>
                 </div>
             </div>
-
-            <script src="/static/assets/js/main.js"></script>
-            <script src="/static/assets/js/schedule.js"></script>
-            <script src="/static/assets/js/register.js"></script>
-            <script src="/static/assets/js/flipclock.min.js"></script>
-
-    </body>
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-61641591-3', 'auto');
-        ga('send', 'pageview');
-        document.getElementById("register").addEventListener("click", function() {
-            ga('send', 'event', 'register-button', 'click');
-        })
-    </script>
+        </div>
+    </footer>
+    <script src="static/js/main.js"></script>
+</body>
 </html>

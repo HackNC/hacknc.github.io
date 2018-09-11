@@ -1,0 +1,157 @@
+@import "components/palette";
+
+body {
+    color: $f-color !important;
+    background: $g-plum;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1em;
+}
+
+a {
+    color: $g-red;
+    font-weight: bold;
+}
+
+.section {
+    font-size: 1.3em;
+}
+
+main {
+    background: $g-plum;
+}
+
+.dark {
+    background: $g-plum;
+}
+
+.light {
+    background: $light-bg;
+    color: $g-plum;
+}
+
+.banner {
+    min-height: 100vh;
+}
+
+.logo {
+    display: block;
+    max-width: 42%;
+    margin: auto;
+    z-index: -1;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .logo {
+        max-width: 100%;
+    }
+}
+
+.hacknc {
+    margin-top: 0;
+}
+
+.form-btn, .form-btn:focus {
+    width: 20vw;
+    height: 60px;
+    font-size: 1em;
+    overflow: hidden;
+    background-color: $g-light-red;
+    color: $f-color;
+    text-transform: none;
+    font-weight: 200;
+    margin: 0.5em auto 1em auto;
+}
+
+.form-btn:hover {
+    background-color: $g-light-red;
+    color: $f-color;
+}
+
+@media only screen and (max-width: 600px) {
+    .form-btn, .form-btn:focus, .form-btn:hover {
+        width: 70vw;
+    }
+}
+
+.modal {
+    .form-btn {
+        font-size: 1.5em;
+    }
+}
+
+nav {
+    width: 100%;
+    background-color: $g-plum;
+    font-family: "Quicksand";
+}
+
+nav ul a {
+    color: $f-color;
+    margin: 0px 0px 0px 20px;
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+.nfixed {
+    margin-top: 0;
+    top: 0;
+    z-index: 100;
+    position: fixed;
+}
+
+.nav-anchor {
+    display: block;
+    position: relative;
+    top: -64px;
+    visibility: hidden;
+}
+
+.collapsible {
+    border: 5px solid $border;
+    border-radius: 5px;
+    color: $g-plum;
+}
+
+.collapsible-header {
+    background: $light-bg;
+    border-bottom: 0px;
+    h6 {
+        font-weight: 600;
+    }
+}
+
+.collapsible-body {
+    padding: 1rem;
+    color: $light-bg;
+    border-bottom: 0px;
+    p {
+        margin: 0 0 0 0;
+    }
+}
+
+.map-container {
+    width: 100%;
+    height: 400px;
+}
+
+.map-container iframe {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.sponsor-image {
+    display: inline-block;
+    width: 30%;
+    min-width: 200px;
+}
+
+footer a {
+    color: $dark-bg;
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 120%;
+    font-weight: normal;
+}
