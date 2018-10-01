@@ -1,0 +1,122 @@
+[
+    {
+        "date": "HackNC Week of Workshops",
+        "schedule": [
+            {
+                "time": "Monday, Oct. 1st, 5:00 PM",
+                "event": "Introduction to Game Development",
+                "location": "Sitterson 014"
+            },
+            {
+                "time": "Tuesday, Oct. 2nd, 5:00 PM",
+                "event": "Intro. to Mobile Development with Android Studio and React Native",
+                "location": "Fred Brooks 009"
+            },
+            {
+                "time": "Wednesday, Oct. 3rd, 5:00 PM",
+                "event": "Intro to Flask: Crash Course in  Web Development",
+                "location": "Sitterson 014"
+            },
+            {
+                "time": "Thursday, Oct. 4th, 5:00 PM",
+                "event": "'Ideate' - Coming up with a Brilliant Idea",
+                "location": "Fred Brooks 009"
+            }
+        ]
+    },
+    {
+        "date": "Friday, October 5th",
+        "schedule": [
+            {
+                "time": "7:00 PM",
+                "event": "Check-in begins for traveling hackers",
+                "location": "Murray Lobby"
+            },
+            {
+                "time": "8:00 PM",
+                "event": "Pizza for traveling hackers",
+                "location": "-"
+            },
+            {
+                "time": "11:00 PM",
+                "event": "Late night tour of UNC",
+                "location": "Murray Lobby"
+            }
+        ]
+    },
+    {
+        "date": "Saturday, October 6th",
+        "schedule": [
+            {
+                "time": "7:00 AM",
+                "event": "Check-in begins for RSVP'd hackers",
+                "location": "Murray Lobby"
+            },
+            {
+                "time": "7:30 AM",
+                "event": "Breakfast",
+                "location": "Murray Ground Floor"
+            },
+            {
+                "time": "9:30 AM",
+                "event": "Check-in begins for everyone",
+                "location": "Murray Lobby"
+            },
+            {
+                "time": "10:00 AM",
+                "event": "Opening ceremony begins",
+                "location": "Murray G201"
+            },
+            {
+                "time": "11:00 AM",
+                "event": "Sponsor Fair",
+                "location": "Murray Ground Floor"
+            },
+            {
+                "time": "11:00 AM",
+                "event": "Hacking begins!",
+                "location": "-"
+            },
+            {
+                "time": "12:30 PM",
+                "event": "Lunch",
+                "location": "Murray Ground Floor"
+            },
+            {
+                "time": "6:30 PM",
+                "event": "Dinner",
+                "location": "Murray Ground Floor"
+            },
+            {
+                "time": "12:00 AM",
+                "event": "Midnight Munchies",
+                "location": "Murray Ground Floor"
+            }
+        ]
+    },
+    {
+        "date": "Sunday, October 7th",
+        "schedule": [
+            {
+                "time": "8:00 AM",
+                "event": "Breakfast",
+                "location": "Murray Ground Floor"
+            },
+            {
+                "time": "11:00 AM",
+                "event": "Hacking ends",
+                "location": "-"
+            },
+            {
+                "time": "11:30 AM",
+                "event": "Judging starts",
+                "location": "Murray G201, G205, Venable G311, G307"
+            },
+            {
+                "time": "1:30 PM",
+                "event": "Closing Ceremony",
+                "location": "Murray G201"
+            }
+        ]
+    }
+]

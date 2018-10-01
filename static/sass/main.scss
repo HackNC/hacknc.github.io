@@ -108,13 +108,13 @@ nav ul a {
 }
 
 .collapsible {
-    border: 5px solid $border;
+    border: 5px solid $dark-bg;
     border-radius: 5px;
-    color: $g-plum;
+    color: $f-color;
 }
 
 .collapsible-header {
-    background: $light-bg;
+    background: $dark-bg;
     border-bottom: 0px;
     h6 {
         font-weight: 600;
@@ -123,7 +123,7 @@ nav ul a {
 
 .collapsible-body {
     padding: 1rem;
-    color: $light-bg;
+    color: $dark-bg;
     border-bottom: 0px;
     p {
         margin: 0 0 0 0;
@@ -142,10 +142,60 @@ nav ul a {
     height: 100%;
 }
 
+.table-row-odd {
+    background: $table-light;
+}
+
+.table-row-even {
+    background: $table-dark;
+}
+
+.sponsors {
+    background: $sponsor-bg;
+    color: $dark-bg;
+}
+
 .sponsor-image {
     display: inline-block;
-    width: 30%;
-    min-width: 200px;
+    max-width: 100%;
+}
+
+.tier-4 {
+    max-width: 80%;
+    min-width: 280px;
+    max-height: 250px;
+}
+
+.tier-3 {
+    max-width: 70%;
+    min-width: 240px;
+    max-height: 180px;
+}
+
+.tier-2 {
+    max-width: 70%;
+    min-width: 240px;
+    max-height: 180px;
+}
+
+.tier-1 {
+    max-width: 40%;
+    min-width: 180px;
+    max-height: 100px;
+}
+
+.sponsor-row {
+    margin-bottom: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .sponsor-row .col {
+        float: none;
+    }
+}
+
+.prizes .dark {
+    background: $table-dark;
 }
 
 footer a {
